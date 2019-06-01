@@ -4,6 +4,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 	"os/exec"
 	"strconv"
@@ -33,7 +34,40 @@ func handleReading(in *bufio.Scanner) {
 }
 
 func handleCreation(in *bufio.Scanner) {
-	fmt.Println("Creating")
+	fmt.Println("Enter owner")
+	in.Scan()
+	owner := in.Text()
+	fmt.Println("Enter Repository")
+	in.Scan()
+	repo := in.Text()
+	fmt.Println("Enter title")
+	in.Scan()
+	title := in.Text()
+
+	body := ""
+	fmt.Println("Select method to enter body")
+	fmt.Println(`
+1) stdin
+2) editor
+	`)
+	in.Scan()
+	choiceString := in.Text()
+	choice, err := strconv.Atoi(choiceString)
+	if err != nil {
+		log.Fatalf("handleCreation: %v\n", err)
+	}
+	switch choice {
+	case 1:
+		fmt.Println("Enter body")
+		in.Scan()
+		body = in.Text()
+	}
+
+	fmt.Println("Enter labels seprated by spaces")
+	in.Scan()
+	labels := strings.Split(in.Text(), " ")
+
+	github.CreateIssue(owner, repo, title, body, labels)
 }
 
 func handleUpdate(in *bufio.Scanner) {
@@ -55,6 +89,7 @@ func runMainDialog(in *bufio.Scanner) {
 	switch choice {
 	case 1:
 		handleReading(in)
+	// Pain to complete because of authroization
 	case 2:
 		handleCreation(in)
 	case 3:
