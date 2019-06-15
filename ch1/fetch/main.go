@@ -20,7 +20,7 @@ func main() {
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "fetch: reading %s: %v\n", url, err)
 		}
-		fmt.Printf("%s\n", minify(string(b)))
+		fmt.Printf("%s\n", string(b))
 	}
 }
 

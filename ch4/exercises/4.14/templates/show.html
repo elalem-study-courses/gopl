@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Issues</title>
+  </head>
+  <body>
+    <h2>{{.TotalCount}} issues were found</h2>
+    <table>
+      <tr>
+        <th>Number</th>
+        <th>Title</th>
+        <th>User</th>
+        <th>Asignees</th>
+      </tr>
+      {{range .Items}}
+      <tr>
+        <td><a href='{{.HTMLURL}}'>{{.Number}}</a></td>
+        <td>{{.Title}}</td>
+        <td>{{.User.Login}}</td>
+        <td>
+          {{range .Assignees}}
+          <p>{{.Login}}</p>
+          {{end}}
+        </td>
+      </tr>
+      {{end}}
+    </table>
+  </body>
+</html>
