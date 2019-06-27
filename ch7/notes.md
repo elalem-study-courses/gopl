@@ -15,3 +15,4 @@
 * text/tabwriter package produces a table whose columns are neatly aligned.
 * `http.Error()` function can be used in http errors.
 * When receiving data from client in the http handler func we can use `r.ParseForm()` followed by `r.Form.Get("something")`
+* In type assertion when an interface type is asserted against a concrete type if the assertion succeed then the interface type will return a concrete type of the asserted type only if the interface type was the concrete type.
