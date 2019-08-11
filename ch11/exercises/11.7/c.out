@@ -1,0 +1,18 @@
+mode: count
+learning/go-book/ch11/exercises/11.7/intset/intset.go:12.34,15.2 2 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:17.29,19.27 2 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:22.2,22.29 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:19.27,21.3 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:25.39,26.32 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:26.32,27.23 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:27.23,29.4 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:29.9,31.4 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:35.34,38.31 3 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:51.2,52.21 2 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:38.31,39.16 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:42.3,42.27 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:39.16,40.12 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:42.27,43.30 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:43.30,44.29 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:47.5,47.36 1 0
+learning/go-book/ch11/exercises/11.7/intset/intset.go:44.29,46.6 1 0
