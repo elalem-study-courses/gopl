@@ -1,0 +1,29 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <h2>
+      {{.TotalCount}} issues found
+    </h2>
+    <table>
+      <tr>
+        <th>Issue number</th>
+        <th>Issue title</th>
+        <th>Issue labels</th>
+      </tr>
+      {{range .Items}}
+      {{$issueNumber := .Number}}
+      <tr>
+        <td>
+          <a href="http://localhost:3000/issues/{{$issueNumber}}?api_url={{.URL}}">
+            {{$issueNumber}}
+          </a>
+        </td>
+        <td>{{.Title}}</td>
+        <td></td>
+      </tr>
+      {{end}}
+    </table>
+  </body>
+</html>
