@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Tracks</title>
+    <style>
+      td, th {
+        border: 1px solid black
+      }
+
+      th {
+        cursor: pointer;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th data-index="0">Title</th>
+        <th data-index="1">Artist</th>
+        <th data-index="2">Album</th>
+        <th data-index="3">Year</th>
+        <th data-index="4">Length</th>
+      </thead>
+      <tbody>
+        {{range .}}
+        <tr>
+          <td>{{.Title}}</td>
+          <td>{{.Artist}}</td>
+          <td>{{.Album}}</td>
+          <td>{{.Year}}</td>
+          <td>{{.Length}}</td>
+        </tr>
+        {{end}}
+      </tbody>
+    </table>
+
+    <script>
+      $(document).ready(() => {
+        $('th').click(e => {
+          const $elem = $(e.target);
+
+          window.location = `/sort?column=${$elem.data('index')}`;
+        });
+      });
+    </script>
+  </body>
+</html>

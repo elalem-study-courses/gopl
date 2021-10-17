@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Items</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+      <tbody>
+        {{ range $k, $v := . }}
+        <tr>
+          <td>{{ $k }}</td>
+          <td>{{ $v }}</td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </thead>
+  </table>
+</body>
+</html>
